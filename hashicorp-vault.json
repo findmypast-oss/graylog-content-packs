@@ -4,7 +4,7 @@
   "rev": 1,
   "name": "Hashicorp Vault",
   "summary": "A minimal content pack to parse Hashicorp's Vault Audit logs.",
-  "description": "A minimal content pack to parse Hashicorp's [Vault](https://vaultproject.io) Audit logs.\n\nThe content-pack sets up a TCP listener on port 5553. To send Vault audit logs to Graylog, use the 'Socket' audit backend.\n\n```vault audit-enable socket address YOUR_GRAYLOG_HOST:5553```",
+  "description": "A minimal content pack to parse Hashicorp's [Vault](https://vaultproject.io) Audit logs.\n\nThe content-pack sets up a UDP listener on port 5553. To send Vault audit logs to Graylog, use the 'Socket' audit backend.\n\n```vault audit-enable socket address YOUR_GRAYLOG_HOST:5553 socket_type=udp```",
   "vendor": "Attila Molnar (amolnar@findmypast.com)",
   "url": "https://github.com/findmypast-oss/graylog-content-packs/blob/master/hashicorp-vault.json",
   "parameters": [],
