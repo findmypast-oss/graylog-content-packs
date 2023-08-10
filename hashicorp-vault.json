@@ -1,7 +1,7 @@
 {
   "v": 1,
   "id": "96d43c0b-3e6a-48c4-a025-28d426cbdf7f",
-  "rev": 1,
+  "rev": 2,
   "name": "Hashicorp Vault",
   "summary": "A minimal content pack to parse Hashicorp's Vault Audit logs.",
   "description": "A minimal content pack to parse Hashicorp's [Vault](https://vaultproject.io) Audit logs.\n\nThe content-pack sets up a UDP listener on port 5553. To send Vault audit logs to Graylog, use the 'Socket' audit backend.\n\n```vault audit-enable socket address YOUR_GRAYLOG_HOST:5553 socket_type=udp```",
