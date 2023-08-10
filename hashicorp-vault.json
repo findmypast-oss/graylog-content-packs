@@ -15,6 +15,95 @@
         "name": "stream",
         "version": "1"
       },
+      "id": "c615bde2-80a4-4a27-a1f6-68b25716344a",
+      "data": {
+        "alarm_callbacks": [],
+        "outputs": [],
+        "remove_matches": {
+          "@type": "boolean",
+          "@value": false
+        },
+        "title": {
+          "@type": "string",
+          "@value": "Vault Updates"
+        },
+        "stream_rules": [
+          {
+            "type": {
+              "@type": "string",
+              "@value": "EXACT"
+            },
+            "field": {
+              "@type": "string",
+              "@value": "vault_type"
+            },
+            "value": {
+              "@type": "string",
+              "@value": "request"
+            },
+            "inverted": {
+              "@type": "boolean",
+              "@value": false
+            },
+            "description": {
+              "@type": "string",
+              "@value": ""
+            }
+          },
+          {
+            "type": {
+              "@type": "string",
+              "@value": "EXACT"
+            },
+            "field": {
+              "@type": "string",
+              "@value": "vault_request_operation"
+            },
+            "value": {
+              "@type": "string",
+              "@value": "read"
+            },
+            "inverted": {
+              "@type": "boolean",
+              "@value": true
+            },
+            "description": {
+              "@type": "string",
+              "@value": ""
+            }
+          }
+        ],
+        "alert_conditions": [],
+        "matching_type": {
+          "@type": "string",
+          "@value": "AND"
+        },
+        "disabled": {
+          "@type": "boolean",
+          "@value": false
+        },
+        "description": {
+          "@type": "string",
+          "@value": "All Vault updates"
+        },
+        "default_stream": {
+          "@type": "boolean",
+          "@value": false
+        }
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=3.1.2+9e96b08"
+        }
+      ]
+    },
+    {
+      "v": "1",
+      "type": {
+        "name": "stream",
+        "version": "1"
+      },
       "id": "c615bde2-80a4-4a27-a1f6-68b25716344e",
       "data": {
         "alarm_callbacks": [],
@@ -44,28 +133,6 @@
             "inverted": {
               "@type": "boolean",
               "@value": true
-            },
-            "description": {
-              "@type": "string",
-              "@value": ""
-            }
-          },
-          {
-            "type": {
-              "@type": "string",
-              "@value": "EXACT"
-            },
-            "field": {
-              "@type": "string",
-              "@value": "vault_type"
-            },
-            "value": {
-              "@type": "string",
-              "@value": "response"
-            },
-            "inverted": {
-              "@type": "boolean",
-              "@value": false
             },
             "description": {
               "@type": "string",
@@ -151,28 +218,6 @@
             "value": {
               "@type": "string",
               "@value": ""
-            },
-            "inverted": {
-              "@type": "boolean",
-              "@value": false
-            },
-            "description": {
-              "@type": "string",
-              "@value": ""
-            }
-          },
-          {
-            "type": {
-              "@type": "string",
-              "@value": "EXACT"
-            },
-            "field": {
-              "@type": "string",
-              "@value": "vault_type"
-            },
-            "value": {
-              "@type": "string",
-              "@value": "response"
             },
             "inverted": {
               "@type": "boolean",
@@ -483,28 +528,6 @@
           "@value": "Vault Authentications"
         },
         "stream_rules": [
-          {
-            "type": {
-              "@type": "string",
-              "@value": "EXACT"
-            },
-            "field": {
-              "@type": "string",
-              "@value": "vault_type"
-            },
-            "value": {
-              "@type": "string",
-              "@value": "response"
-            },
-            "inverted": {
-              "@type": "boolean",
-              "@value": false
-            },
-            "description": {
-              "@type": "string",
-              "@value": ""
-            }
-          },
           {
             "type": {
               "@type": "string",
